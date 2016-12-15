@@ -1,0 +1,5 @@
+
+#trueHeader{z-index:800000;left:0;right:0;padding:8px 0;transition:padding 0.35s ease;-khtml-transition:padding 0.35s ease;-webkit-transition:padding 0.35s ease;-moz-transition:padding 0.35s ease;-ms-transition:padding 0.35s ease;-o-transition:padding 0.35s ease;background-color:transparent;zoom:1}
+
+#header.sticky #trueHeader{position:fixed;top:0; }
+#header.sticky.condensed #trueHeader{padding:0px 0}

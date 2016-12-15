@@ -1,0 +1,86 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Subnav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@subnav-color:                                  @global-color;
+@subnav-hover-color:                            @global-link-color;
+@subnav-active-color:                           @global-link-color;
+
+@subnav-line-border:                            @global-border;
+
+@subnav-pill-hover-background:                  #fafafa;
+@subnav-pill-hover-color:                       @global-color;
+@subnav-pill-active-background:                 @global-primary-background;
+@subnav-pill-active-color:                      @global-contrast-color;
+
+@subnav-disabled-color:                         @global-muted-color;
+
+//New
+@subnav-font-family:                            Helvetica, Arial, sans-serif;
+@subnav-font-size:                              13px;
+@subnav-line-height:                            24px;
+@subnav-text-transform:                         @global-text-transform;
+@subnav-letter-spacing:                         @global-letter-spacing;
+
+@subnav-pill-border-radius:                     @global-border-radius;
+@subnav-pill-onclick-background:                rgba(0,0,0,0);
+@subnav-pill-onclick-color:                     @global-contrast-color;
+
+// Component
+// ========================================================================
+
+.hook-subnav() {
+      font-family: @subnav-font-family;
+      font-size: @subnav-font-size;
+      line-height: @subnav-line-height;
+      text-transform: @subnav-text-transform;
+      letter-spacing: @subnav-letter-spacing;
+      -webkit-transition: @global-transition;
+      transition: @global-transition;
+}
+
+.hook-subnav-hover() {}
+
+.hook-subnav-active() {font-weight: @global-bold-font-weight;}
+
+
+// Modifier: `uk-subnav-line'
+// ========================================================================
+
+.hook-subnav-line-divider() {}
+
+
+// Modifier: `uk-subnav-pill'
+// ========================================================================
+
+.hook-subnav-pill() { border-radius: @global-border-radius; }
+
+.hook-subnav-pill-hover() {}
+
+.hook-subnav-pill-active() {}
+
+
+// Disabled state
+// ========================================================================
+
+.hook-subnav-disabled() { box-shadow: none; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-subnav-misc() {
+  // uk-subnav-pill onclick event
+ .uk-subnav-pill > li > a:active {
+     background: @subnav-pill-onclick-background;
+     box-shadow: inset 2px 2px 6px rgba(67, 31, 28, 0.2);
+     color: @subnav-pill-onclick-color;
+ }
+}

@@ -1,0 +1,5 @@
+/.htaccess
+/administrator/cache/*
+/installation/*
+/configuration.php
+
